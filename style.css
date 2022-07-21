@@ -1,0 +1,15 @@
+.gridColumn {
+    display: flex;
+    flex-direction: row;
+}
+
+.cell {
+    border: 1px solid gray;
+    background-color: white;
+    min-width: 20px;
+    min-height: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1 1;
+  }
+
