@@ -1,3 +1,40 @@
+.body {
+  align-items: center;
+  justify-content: center;
+}
+
+#playArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: red;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-grow: 0 0 100%;
+  width: 800px;
+  height: 800px;
+  border: solid 1px red;
+  background-color: rgb(245, 245, 245);
+}
+
+.h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+#sizeSelect {
+  display: flex;
+  margin: 10px;
+}
+
 .gridColumn {
     display: flex;
     flex-direction: row;
@@ -5,11 +42,19 @@
 
 .cell {
     border: 1px solid gray;
-    background-color: white;
+    min-width: 20px;
+    min-height: 20px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .drawn {
+    border: 1px solid black;
+    background-color: black;
     min-width: 20px;
     min-height: 20px;
     display: flex;
     flex-direction: row;
     flex-grow: 1 1;
-  }
+  }  
 

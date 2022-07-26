@@ -1,7 +1,17 @@
 const container = document.getElementById("container");
 let columns = document.getElementsByClassName("gridColumn");
 const cells = document.getElementsByClassName("cell");
-let cell;
+
+makeGrid(16, 16);
+
+const sizeSelect = document.getElementById('sizeSelect');
+console.log(sizeSelect);
+sizeSelect.addEventListener('click', () => {
+        console.log("test");
+        let x = prompt("Please select your desired width.");
+        let y = prompt("Please select your desired height.");
+        makeGrid(x, y); 
+});
 
 function makeGrid(x, y) {
     makeColumns(x);
@@ -20,29 +30,12 @@ function makeRows(y) {
         for (j = 0; j < y; j++) {
             let newCell = document.createElement("div");
             columns[j].appendChild(newCell).className = "cell";
-        };
+            newCell.addEventListener("mouseover", () => {
+                console.log("test");
+                newCell.className = "drawn";
+            });
+        }
     };
 };
 
-makeGrid(16, 16);
 
-for (i = 0 ; i < cells.length; i++) {
-    cells[i].addEventListener("mouseover", () => {
-        //cells.classList.add("drawn");
-        cell.style.backgroundColor = "black";
-        cell.style.borderColor = "black";
-        container.appendChild(draw);
-    }); 
- }
-
-//const draw = document.getElementsByClassName(".cell");
-//cells.addEventListener("mouseover", () => {
-//    draw.classList.add("draw");
-//    draw.style.backgroundColor = "black";
-//    draw.style.borderColor = "black";
-//    container.appendChild(draw);
-//});
-
-//document.getElementsByClassName("cell").onmouseover = function() { 
-//    console.log("test");
-//  }
