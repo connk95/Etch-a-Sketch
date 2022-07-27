@@ -1,21 +1,17 @@
 const container = document.getElementById("container");
 let columns = document.getElementsByClassName("gridColumn");
-const cells = document.getElementsByClassName("cell");
+let cells = document.getElementsByClassName("cell");
+let drawn = document.getElementsByClassName("drawn");
 
 makeGrid(16, 16);
-
-const sizeSelect = document.getElementById('sizeSelect');
-console.log(sizeSelect);
-sizeSelect.addEventListener('click', () => {
-        console.log("test");
-        let x = prompt("Please select your desired width.");
-        let y = prompt("Please select your desired height.");
-        makeGrid(x, y); 
-});
 
 function makeGrid(x, y) {
     makeColumns(x);
     makeRows(y);
+};
+
+function removeGrid() {
+    container.replaceChildren();
 };
 
 function makeColumns(x) {
@@ -34,8 +30,19 @@ function makeRows(y) {
                 console.log("test");
                 newCell.className = "drawn";
             });
-        }
+        };
     };
 };
 
+const sizeSelect = document.getElementById("sizeSelect");
+sizeSelect.addEventListener("click", () => {
+        let x = prompt("Please select your desired grid size.");
+        let y = x;
+        if (x > 100||y > 100) {
+            alert("Please input a number less than or equal to 100.");
+        } else {
+            removeGrid();
+            makeGrid(x, y);
+        }; 
+});
 

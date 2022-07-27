@@ -9,17 +9,18 @@
   justify-content: center;
   flex-direction: column;
   background-color: red;
+  height: 100%;
 }
 
 #container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+  align-items: stretch;
+  justify-content: space-evenly;
   flex-direction: column;
-  flex-grow: 0 0 100%;
-  width: 800px;
-  height: 800px;
-  border: solid 1px red;
+  width: 650px;
+  height: 650px;
   background-color: rgb(245, 245, 245);
 }
 
@@ -36,25 +37,25 @@
 }
 
 .gridColumn {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
 }
 
 .cell {
-    border: 1px solid gray;
-    min-width: 20px;
-    min-height: 20px;
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: stretch;
+  border: 1px solid gray;
+  
   }
 
   .drawn {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     border: 1px solid black;
     background-color: black;
-    min-width: 20px;
-    min-height: 20px;
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1 1;
   }  
 
