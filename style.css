@@ -8,8 +8,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: red;
+  background-color: rgb(212,22,26);
   height: 100%;
+  border-radius: 30px;
 }
 
 #container {
@@ -24,16 +25,25 @@
   background-color: rgb(245, 245, 245);
 }
 
-.h1 {
+p {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 20px;
+  font-size: 30px;
+  color: rgb(201,156,64);
+  font-style: italic;
+  font-family: sans-serif;
 }
 
 #sizeSelect {
   display: flex;
-  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
 }
 
 .gridColumn {
